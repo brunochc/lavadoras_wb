@@ -1,11 +1,9 @@
-/* Reset y estilos base mejorados */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
-
+/* Reset y estilos base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Fuente principal para toda la página */
+    font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -16,70 +14,46 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    line-height: 1.6; /* Mejor legibilidad */
 }
 
-/* Header mejorado */
+/* Estilos para el header */
 header {
-    background-color: rgba(15, 20, 32, 0.85); /* Mayor opacidad */
-    padding: 1rem 2rem; /* Más padding horizontal */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(8px); /* Más blur */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-}
-
-.header-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem; /* Espacio consistente entre elementos */
-}
-
-.title {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin-bottom: 0;
-    transition: all 0.3s ease;
-    color: #f8f8f8; /* Blanco más puro */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    font-weight: 700; /* Más negrita */
-    font-family: 'Poppins', sans-serif; /* Consistencia */
-}
-
-.title:hover {
-    color: #4CAF50;
-    transform: scale(1.03); /* Efecto más sutil */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.contact-number {
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    transition: all 0.3s ease;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.contact-number:hover {
-    color: #4CAF50;
-    transform: translateX(3px); /* Movimiento más sutil */
+    width: 100%;
 }
 
 .flag {
-    width: 45px; /* Tamaño ligeramente mayor */
+    width: 50px;
     height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-    border-radius: 2px; /* Esquinas redondeadas */
+}
+
+.header-text {
+    text-align: right;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.contact-number {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
 }
 
 .flag:hover {
-    transform: scale(1.15); /* Efecto más notable */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
-/* Main content mejorado */
+/* Main content */
 main {
     flex: 1;
     display: flex;
@@ -89,114 +63,122 @@ main {
 }
 
 .content-overlay {
-    background-color: rgba(39, 37, 37, 0.8); /* Más opacidad */
-    padding: 2.5rem;
-    border-radius: 12px; /* Bordes más redondeados */
-    max-width: 850px; /* Ancho ligeramente mayor */
-    backdrop-filter: blur(8px);
+    background-color: rgba(39, 37, 37, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    backdrop-filter: blur(5px);
     transition: all 0.5s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: justify;
 }
 
 .content-overlay:hover {
-    background-color: rgba(44, 42, 42, 0.85);
+    background-color: rgba(44, 42, 42, 0.8);
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px rgba(92, 89, 89, 0.3);
 }
 
 .content-overlay h2 {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    margin-bottom: 1.5rem;
-    color: #e6e7ff; /* Color más vibrante */
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+    color: #cacdf1;
     transition: all 0.3s ease;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif; /* Fuente alternativa para títulos */
 }
 
 .content-overlay h2:hover {
-    transform: skewX(-3deg); /* Efecto más sutil */
-    color: #4CAF50;
+    transform: skewX(-5deg);
 }
 
-.content-overlay p {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-    line-height: 1.7; /* Mayor espacio entre líneas */
-    transition: all 0.3s ease;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-}
-
-.content-overlay p:hover {
-    letter-spacing: 0.3px; /* Espaciado más sutil */
-}
-
-/* Footer mejorado */
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1.5rem;
+/* Estilos para la lista ordenada */
+.content-overlay ul {
+    padding-left: 2rem;
+    margin: 1.5rem 0;
+    line-height: 1.8;
     text-align: center;
-    font-size: 1rem;
-    backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    counter-reset: item;
+    list-style-type: none;
 }
 
-/* Botón de WhatsApp mejorado */
+.content-overlay ul li {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+    position: relative;
+    counter-increment: item;
+}
+
+.content-overlay ul li::before {
+    
+    color: #cacdf1;
+    font-weight: bold;
+    position: absolute;
+    left: -1.8rem;
+}
+
+.content-overlay ul li:hover {
+    color: #cacdf1;
+    transform: translateX(8px);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Botón de WhatsApp */
 .whatsapp-btn {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 65px;
-    height: 65px;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
     background-color: #25D366;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     z-index: 100;
-    border: 2px solid white;
 }
 
 .whatsapp-btn:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(10deg);
     background-color: #128C7E;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .whatsapp-btn img {
-    width: 35px;
-    height: 35px;
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+    width: 40px;
+    height: 40px;
 }
 
-/* Responsive mejorado */
+/* Responsive */
 @media (max-width: 768px) {
-    header {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .header-text {
-        align-items: center;
-        text-align: center;
-    }
-    
     .content-overlay {
-        padding: 1.8rem;
-        margin: 1rem;
+        padding: 1.5rem;
     }
     
     .whatsapp-btn {
-        width: 55px;
-        height: 55px;
-        bottom: 20px;
-        right: 20px;
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
     }
     
     .whatsapp-btn img {
         width: 30px;
         height: 30px;
+    }
+
+    .flag {
+        width: 40px;
+    }
+    
+    .header-left {
+        gap: 10px;
     }
 }
