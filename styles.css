@@ -1,0 +1,158 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("images/DZ-07.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: rgba(190, 204, 241, 0.7);
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+header h1:hover {
+    color: #4CAF50;
+    transform: scale(1.05);
+}
+
+.contact-number {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    transition: all 0.3s ease;
+}
+
+.contact-number:hover {
+    color: #4CAF50;
+    transform: translateX(5px);
+}
+/* Agrega esto a tu archivo styles.css */
+header .flag {
+    width: 40px; /* o el tamaño que desees */
+    height: auto; /* mantiene la proporción */
+    margin-left: 10px; /* espacio entre el texto y la bandera */
+    vertical-align: middle; /* alinea verticalmente con el texto */
+    transition: transform 0.3s ease; /* efecto hover opcional */
+}
+
+header .flag:hover {
+    transform: scale(1.1); /* efecto de zoom al pasar el mouse */
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-overlay {
+    background-color: rgba(39, 37, 37, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+}
+
+.content-overlay:hover {
+    background-color: rgba(44, 42, 42, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(92, 89, 89, 0.3);
+}
+
+.content-overlay h2 {
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+    color: #cacdf1;
+    transition: all 0.3s ease;
+}
+
+.content-overlay h2:hover {
+    transform: skewX(-5deg);
+}
+
+.content-overlay p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.content-overlay p:hover {
+    letter-spacing: 0.5px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #128C7E;
+}
+
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-overlay {
+        padding: 1.5rem;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-btn img {
+        width: 30px;
+        height: 30px;
+    }
+}
