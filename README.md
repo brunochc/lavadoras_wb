@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Despliegue a Cloudflare Pages
 
 ## Comandos para guardar y publicar cambios
@@ -29,3 +30,6 @@ wrangler whoami
 
 # 7. (Solo la primera vez) Configura wrangler para usar un nuevo API token de Cloudflare
 wrangler config
+=======
+Paginas para personas que quieren iniciar sus negocios
+>>>>>>> c5d4e4742a9de0879e2f3c7b6d69d7f1e7b08d3e
