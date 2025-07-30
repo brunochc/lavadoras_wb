@@ -18,7 +18,7 @@ document.querySelector('.content-overlay').addEventListener('mouseleave', functi
 
 // Cambio de color en el footer al hacer hover
 document.querySelector('footer').addEventListener('mouseenter', function() {
-    this.style.backgroundColor = 'rgba(0, 50, 0, 0.7)';
+    this.style.backgroundColor = 'rgba(0, 36, 50, 0.7)';
 });
 
 document.querySelector('footer').addEventListener('mouseleave', function() {
