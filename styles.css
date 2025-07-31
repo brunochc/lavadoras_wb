@@ -81,6 +81,7 @@ main {
     backdrop-filter: blur(5px);
     transition: all 0.5s ease;
     text-align: justify;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .content-overlay:hover {
@@ -170,6 +171,18 @@ footer {
 .whatsapp-btn img {
     width: 40px;
     height: 40px;
+}
+
+/* Animación de aparición para el contenido principal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
